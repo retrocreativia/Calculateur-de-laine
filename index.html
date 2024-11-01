@@ -7,38 +7,32 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Colonne de gauche : Mesures de l'échantillon -->
-        <div class="column">
-            <h2>Mesures de l'échantillon</h2>
-            <label><strong>Largeur de l'échantillon (cm) :</strong></label>
-            <input type="number" id="largeurEchantillon"><br><br>
+    <label><strong>Largeur de l'échantillon (cm) :</strong></label>
+    <input type="number" id="largeurEchantillon"><br><br>
 
-            <label><strong>Hauteur de l'échantillon (cm) :</strong></label>
-            <input type="number" id="hauteurEchantillon"><br><br>
+    <label><strong>Hauteur de l'échantillon (cm) :</strong></label>
+    <input type="number" id="hauteurEchantillon"><br><br>
 
-            <label><strong>Poids de l'échantillon (g) :</strong></label>
-            <input type="number" id="poidsEchantillon"><br><br>
-        </div>
+    <label><strong>Poids de l'échantillon (g) :</strong></label>
+    <input type="number" id="poidsEchantillon"><br><br>
 
-        <!-- Colonne de droite : Mesures du pull -->
-        <div class="column">
-            <h2>Mesures pour le pull</h2>
-            <label><strong>Largeur du pull (cm) :</strong></label>
-            <input type="number" id="largeurPull"><br><br>
+    <label><strong>Largeur du pull (cm) :</strong></label>
+    <input type="number" id="largeurPull"><br><br>
 
-            <label><strong>Hauteur du pull (cm) :</strong></label>
-            <input type="number" id="hauteurPull"><br><br>
+    <label><strong>Hauteur du pull (cm) :</strong></label>
+    <input type="number" id="hauteurPull"><br><br>
 
-            <label><strong>Longueur de la manche (cm) :</strong></label>
-            <input type="number" id="longueurManche"><br><br>
+    <label><strong>Longueur de la manche (cm) :</strong></label>
+    <input type="number" id="longueurManche"><br><br>
 
-            <label><strong>Largeur de la manche (cm) :</strong></label>
-            <input type="number" id="largeurManche"><br><br>
-        </div>
-    </div>
+    <label><strong>Largeur de la manche au poignet (cm) :</strong></label>
+    <input type="number" id="largeurManchePoignet"><br><br>
+
+    <label><strong>Largeur de la manche au coude (cm) :</strong></label>
+    <input type="number" id="largeurMancheCoude"><br><br>
 
     <button onclick="calculerLaine()">Calculer la quantité de laine</button>
+
     <h2>Résultat : <span id="resultat"></span> g de laine nécessaire</h2>
 
     <script src="script.js"></script>
