@@ -15,7 +15,7 @@ body {
 .column {
     flex: 1;
     padding: 10px;
-    background-color: #fff; /* Fond blanc */
+    background-color: #ffffff; /* Fond blanc */
     border-radius: 10px;
 }
 
