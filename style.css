@@ -15,9 +15,8 @@ body {
 .column {
     flex: 1;
     padding: 10px;
-    background-color: #fff; /* Fond blanc pour les colonnes */
+    background-color: #fff; /* Fond blanc */
     border-radius: 10px;
-    box-shadow: none; /* Suppression de l'ombre */
 }
 
 label {
@@ -34,3 +33,21 @@ input {
     border-radius: 5px;
 }
 
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #d147a3; /* Fond du bouton rose */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b8378a; /* Couleur du bouton au survol */
+}
+
+h2 {
+    color: #d147a3; /* Couleur du texte rose */
+}
