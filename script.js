@@ -7,6 +7,7 @@ function calculerLaine() {
     const longueurManche = parseFloat(document.getElementById('longueurManche').value);
     const largeurManche = parseFloat(document.getElementById('largeurManche').value);
 
+    // Vérifie si les valeurs sont des nombres valides
     if (
         isNaN(largeurEchantillon) || isNaN(hauteurEchantillon) || isNaN(poidsEchantillon) ||
         isNaN(largeurPull) || isNaN(hauteurPull) || isNaN(longueurManche) || isNaN(largeurManche)
@@ -15,12 +16,14 @@ function calculerLaine() {
         return;
     }
 
+    // Calculs
     const surfaceEchantillon = largeurEchantillon * hauteurEchantillon;
     const surfacePull = largeurPull * hauteurPull;
-    const surfaceManche = longueurManche * largeurManche;
+    const surfaceManche = longueurManche * largeurManche; // Surface rectangulaire simple pour la manche
+    const surfaceTotale = surfacePull + (2 * surfaceManche); // Corps + 2 manches
 
-    const surfaceTotale = surfacePull + (2 * surfaceManche);
     const quantiteLaine = (surfaceTotale / surfaceEchantillon) * poidsEchantillon;
 
+    // Affichage du résultat
     document.getElementById('resultat').textContent = quantiteLaine.toFixed(2);
 }
