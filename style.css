@@ -3,7 +3,7 @@ body {
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background-color: #ffe4e1; /* Couleur de fond rose pâle */
+    background-color: #ffffff; /* Fond blanc */
 }
 
 .container {
@@ -15,9 +15,10 @@ body {
 .column {
     flex: 1;
     padding: 10px;
-    background-color: #fff; /* Fond blanc pour la lisibilité */
+    background-color: #fff; /* Fond blanc pour les colonnes */
     border: 1px solid #d147a3; /* Bordure rose */
     border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Légère ombre pour un effet visuel */
 }
 
 label {
@@ -50,5 +51,4 @@ button:hover {
 }
 
 h2 {
-    color: #d147a3; /* Couleur du texte rose */
-}
+    color: #d147a3; /* Couleur du texte 
