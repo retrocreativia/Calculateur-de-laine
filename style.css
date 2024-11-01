@@ -1,22 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    max-width: 800px;
+    max-width: 600px;
     margin: auto;
     padding: 20px;
-    background-color: #ffffff; /* Fond blanc */
-}
-
-.container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.column {
-    flex: 1;
-    padding: 10px;
-    background-color: #ffffff; /* Fond blanc */
-    border-radius: 10px;
+    background-color: #ffe4e1; /* Couleur de fond rose pâle */
 }
 
 label {
@@ -34,8 +21,6 @@ input {
 }
 
 button {
-    display: block;
-    margin: 20px auto;
     padding: 10px 20px;
     background-color: #d147a3; /* Fond du bouton rose */
     color: white;
@@ -49,5 +34,6 @@ button:hover {
 }
 
 h2 {
+    margin-top: 20px;
     color: #d147a3; /* Couleur du texte rose */
 }
