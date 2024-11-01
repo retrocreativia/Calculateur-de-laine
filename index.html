@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de Laine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculateur de Laine</h1>
+    <label>Largeur de l'échantillon (cm) :</label>
+    <input type="number" id="largeurEchantillon"><br><br>
+
+    <label>Hauteur de l'échantillon (cm) :</label>
+    <input type="number" id="hauteurEchantillon"><br><br>
+
+    <label>Poids de l'échantillon (g) :</label>
+    <input type="number" id="poidsEchantillon"><br><br>
+
+    <label>Largeur du pull (cm) :</label>
+    <input type="number" id="largeurPull"><br><br>
+
+    <label>Hauteur du pull (cm) :</label>
+    <input type="number" id="hauteurPull"><br><br>
+
+    <button onclick="calculerLaine()">Calculer la quantité de laine</button>
+
+    <h2>Résultat : <span id="resultat"></span> g de laine nécessaire</h2>
+
+    <script src="script.js"></script>
+</body>
+</html>
