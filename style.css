@@ -25,6 +25,7 @@ input {
     border: 1px solid #d147a3; /* Bordure rose */
     border-radius: 4px;
     box-sizing: border-box;
+    font-weight: bold; /* Texte en gras */
 }
 
 button {
