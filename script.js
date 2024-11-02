@@ -25,6 +25,7 @@ function calculateYarn(section) {
             resultBody.innerHTML = `Quantité de laine estimée pour le corps : ${yarnNeededBody.toFixed(2)} g`;
         } else {
             resultBody.innerHTML = 'Veuillez remplir les mesures du corps pour le calcul.';
+            yarnNeededBody = 0; // Réinitialise la valeur si les entrées sont invalides
         }
     }
 
@@ -40,15 +41,17 @@ function calculateYarn(section) {
             resultSleeve.innerHTML = `Quantité de laine estimée pour les manches : ${yarnNeededSleeve.toFixed(2)} g`;
         } else {
             resultSleeve.innerHTML = 'Veuillez remplir les mesures des manches pour le calcul.';
+            yarnNeededSleeve = 0; // Réinitialise la valeur si les entrées sont invalides
         }
     }
 
-    // Calcul du total si les deux valeurs sont présentes
+    // Calcul du total à chaque fois qu'une section est calculée
     const resultTotal = document.getElementById('result-total');
-    if (yarnNeededBody > 0 && yarnNeededSleeve > 0) {
+    if (yarnNeededBody > 0 || yarnNeededSleeve > 0) {
         const totalYarn = yarnNeededBody + yarnNeededSleeve;
         resultTotal.innerHTML = `Quantité totale de laine estimée pour le corps et les manches : ${totalYarn.toFixed(2)} g`;
     } else {
-        resultTotal.innerHTML = '';
+        resultTotal.innerHTML = ''; // Efface le résultat si une des sections est invalide
     }
 }
+
