@@ -10,6 +10,19 @@
     <div class="container">
         <h2>Calculateur de Laine</h2>
 
+        <!-- Section pour l'échantillon -->
+        <div class="form-section">
+            <h3>Informations sur l'échantillon</h3>
+            <label for="width-swatch">Largeur de l'échantillon (cm)</label>
+            <input type="number" id="width-swatch" placeholder="Entrez la largeur">
+
+            <label for="height-swatch">Hauteur de l'échantillon (cm)</label>
+            <input type="number" id="height-swatch" placeholder="Entrez la hauteur">
+
+            <label for="weight-swatch">Poids de l'échantillon (g)</label>
+            <input type="number" id="weight-swatch" placeholder="Entrez le poids">
+        </div>
+
         <!-- Section pour le corps -->
         <div class="form-section">
             <h3>Calcul du Corps</h3>
@@ -18,12 +31,6 @@
 
             <label for="height-body">Hauteur du corps (cm)</label>
             <input type="number" id="height-body" placeholder="Entrez la hauteur">
-
-            <label for="weight-swatch-body">Poids de l'échantillon (g)</label>
-            <input type="number" id="weight-swatch-body" placeholder="Entrez le poids">
-
-            <label for="area-swatch-body">Surface de l'échantillon (cm²)</label>
-            <input type="number" id="area-swatch-body" placeholder="Entrez la surface">
 
             <button onclick="calculateYarn('body')">Calculer la laine pour le corps</button>
             <div class="result" id="result-body"></div>
@@ -36,4 +43,13 @@
             <input type="number" id="width-sleeve" placeholder="Entrez la largeur">
 
             <label for="height-sleeve">Hauteur de la manche (cm)</label>
-            <input type="number" id="height-slee
+            <input type="number" id="height-sleeve" placeholder="Entrez la hauteur">
+
+            <button onclick="calculateYarn('sleeve')">Calculer la laine pour les manches</button>
+            <div class="result" id="result-sleeve"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
