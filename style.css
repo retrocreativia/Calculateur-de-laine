@@ -12,11 +12,11 @@ body {
 }
 
 .left-section, .right-section {
-    border: 2px solid #d147a3; /* Bordure rose */
+    border: 2px solid #d147a3; /* Encadré rose */
     padding: 20px;
     border-radius: 10px;
+    background-color: #ffffff; /* Fond blanc des encadrés */
     width: 45%; /* Largeur des sections */
-    background-color: #f9f9f9; /* Fond léger */
 }
 
 h2, h3 {
