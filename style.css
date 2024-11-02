@@ -35,6 +35,12 @@ label, .result-value {
     font-weight: bold;
     color: #d147a3; /* Couleur rose pour les labels et résultats */
     font-size: 14px; /* Taille de la police des résultats identique aux labels */
+    text-align: center; /* Centrer le texte des résultats */
+}
+
+.result-grammage {
+    color: #4CAF50; /* Couleur verte pour les résultats de grammage */
+    font-weight: bold;
 }
 
 input {
@@ -66,9 +72,8 @@ button:hover {
     background-color: #b8378a; /* Couleur rose foncée au survol */
 }
 
-.result-value {
-    font-weight: bold;
-    color: #4CAF50; /* Couleur verte pour les résultats */
-    margin-top: 20px; /* Espace supplémentaire au-dessus des résultats */
-    text-align: center; /* Centrer le texte du résultat */
+input:focus {
+    outline: none;
+    border-color: #d147a3; /* Bordure rose lorsque le champ est actif */
+    box-shadow: 0 0 5px #d147a3; /* Ombre rose */
 }
