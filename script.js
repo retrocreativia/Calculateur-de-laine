@@ -3,6 +3,10 @@ function calculerSurface(largeur, hauteur) {
 }
 
 function calculerLaine(surface, surfaceEchantillon, poidsEchantillon) {
+    if (surfaceEchantillon === 0) {
+        alert("La surface de l'échantillon ne peut pas être zéro.");
+        return 0;
+    }
     return (surface / surfaceEchantillon) * poidsEchantillon;
 }
 
@@ -15,7 +19,7 @@ function calculerLaineCorps() {
 
     if (isNaN(largeurEchantillon) || isNaN(hauteurEchantillon) || isNaN(poidsEchantillon) ||
         isNaN(largeurCorps) || isNaN(hauteurCorps)) {
-        alert("Veuillez remplir toutes les informations nécessaires.");
+        alert("Veuillez remplir toutes les informations nécessaires pour l'échantillon et le corps.");
         return;
     }
 
@@ -35,7 +39,7 @@ function calculerLaineManches() {
 
     if (isNaN(largeurEchantillon) || isNaN(hauteurEchantillon) || isNaN(poidsEchantillon) ||
         isNaN(largeurManches) || isNaN(hauteurManches)) {
-        alert("Veuillez remplir toutes les informations nécessaires pour les manches.");
+        alert("Veuillez remplir toutes les informations nécessaires pour l'échantillon et les manches.");
         return;
     }
 
