@@ -7,7 +7,7 @@ body {
 }
 
 h2, h3 {
-    color: #d147a3; /* Couleur rose pour les titres */
+    color: #a1357a; /* Couleur rose plus sombre pour les titres */
     margin-top: 20px;
 }
 
@@ -43,7 +43,7 @@ button:hover {
 
 span {
     font-weight: bold;
-    color: #d147a3; /* Couleur rose pour les résultats */
+    color: #4CAF50; /* Couleur verte pour les résultats */
 }
 
 h3 {
