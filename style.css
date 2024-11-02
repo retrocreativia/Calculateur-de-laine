@@ -1,9 +1,22 @@
 body {
     font-family: Arial, sans-serif;
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
     background-color: #ffffff; /* Fond blanc */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+}
+
+.left-section, .right-section {
+    border: 2px solid #d147a3; /* Bordure rose */
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%; /* Largeur des sections */
+    background-color: #f9f9f9; /* Fond léger */
 }
 
 h2, h3 {
