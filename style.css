@@ -55,7 +55,7 @@ input {
     border-radius: 4px;
     box-sizing: border-box;
     font-weight: bold; /* Texte en gras */
-    color: #a1357a; /* Couleur des chiffres */
+    color: #a1357a; /* Couleur du texte en gras identique aux titres */
 }
 
 button {
