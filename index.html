@@ -23,4 +23,32 @@
             <label><strong>Largeur du corps (cm) :</strong></label>
             <input type="number" id="largeurCorps"><br><br>
 
-            <label><strong>Hauteur du corp
+            <label><strong>Hauteur du corps (cm) :</strong></label>
+            <input type="number" id="hauteurCorps"><br><br>
+
+            <button onclick="calculerLaineCorps()"><strong>Calculer la quantité de laine pour le corps</strong></button>
+            <h3 id="resultatCorps">Résultat quantité de laine pour un morceau : ... g</h3>
+            <h3 id="resultatCorpsTotal">Résultat quantité totale pour le corps (avant et dos) : ... g</h3>
+        </div>
+
+        <div class="right-section">
+            <h2>Calcul des manches (optionnel)</h2>
+            <label><strong>Largeur des manches (cm) :</strong></label>
+            <input type="number" id="largeurManches"><br><br>
+
+            <label><strong>Longueur des manches (cm) :</strong></label>
+            <input type="number" id="longueurManches"><br><br>
+
+            <button onclick="calculerLaineManches()"><strong>Calculer la quantité de laine pour les manches</strong></button>
+            <h3 id="resultatManches">Résultat quantité de laine pour une manche : ... g</h3>
+            <h3 id="resultatManchesTotal">Résultat quantité totale pour les deux manches : ... g</h3>
+
+            <h2>Résultat total</h2>
+            <button onclick="calculerLaineTotale()"><strong>Calculer la quantité totale de laine</strong></button>
+            <h3 id="resultatTotal">Total pour les deux manches et le corps : ... g</h3>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
