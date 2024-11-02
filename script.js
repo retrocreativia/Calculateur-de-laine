@@ -1,29 +1,26 @@
-function calculerLaine() {
-    const largeurEchantillon = parseFloat(document.getElementById('largeurEchantillon').value);
-    const hauteurEchantillon = parseFloat(document.getElementById('hauteurEchantillon').value);
-    const poidsEchantillon = parseFloat(document.getElementById('poidsEchantillon').value);
-    const largeurPull = parseFloat(document.getElementById('largeurPull').value);
-    const hauteurPull = parseFloat(document.getElementById('hauteurPull').value);
-    const longueurManche = parseFloat(document.getElementById('longueurManche').value);
-    const largeurManche = parseFloat(document.getElementById('largeurManche').value);
+function calculateYarn(section) {
+    let width, height, weightSwatch, areaSwatch, resultElement;
 
-    // Vérifie si les valeurs sont des nombres valides
-    if (
-        isNaN(largeurEchantillon) || isNaN(hauteurEchantillon) || isNaN(poidsEchantillon) ||
-        isNaN(largeurPull) || isNaN(hauteurPull) || isNaN(longueurManche) || isNaN(largeurManche)
-    ) {
-        alert("Veuillez remplir tous les champs avec des valeurs numériques.");
-        return;
+    if (section === 'body') {
+        width = document.getElementById('width-body').value;
+        height = document.getElementById('height-body').value;
+        weightSwatch = document.getElementById('weight-swatch-body').value;
+        areaSwatch = document.getElementById('area-swatch-body').value;
+        resultElement = document.getElementById('result-body');
+    } else if (section === 'sleeve') {
+        width = document.getElementById('width-sleeve').value;
+        height = document.getElementById('height-sleeve').value;
+        weightSwatch = document.getElementById('weight-swatch-sleeve').value;
+        areaSwatch = document.getElementById('area-swatch-sleeve').value;
+        resultElement = document.getElementById('result-sleeve');
     }
 
-    // Calculs
-    const surfaceEchantillon = largeurEchantillon * hauteurEchantillon;
-    const surfacePull = largeurPull * hauteurPull;
-    const surfaceManche = longueurManche * largeurManche; // Surface rectangulaire simple pour la manche
-    const surfaceTotale = surfacePull + (2 * surfaceManche); // Corps + 2 manches
-
-    const quantiteLaine = (surfaceTotale / surfaceEchantillon) * poidsEchantillon;
-
-    // Affichage du résultat
-    document.getElementById('resultat').textContent = quantiteLaine.toFixed(2);
+    if (width && height && weightSwatch && areaSwatch) {
+        const totalArea = width * height;
+        const numSwatches = totalArea / areaSwatch;
+        const yarnNeeded = numSwatches * weightSwatch;
+        resultElement.innerHTML = `Quantité de laine estimée : ${yarnNeeded.toFixed(2)} g`;
+    } else {
+        resultElement.innerHTML = 'Veuillez remplir tous les champs.';
+    }
 }
