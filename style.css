@@ -3,20 +3,21 @@ body {
     background-color: #ffffff; /* Fond blanc */
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 10px; /* Réduction du padding général */
+    font-size: 14px; /* Réduction de la taille de la police */
 }
 
 .container {
     display: flex;
-    gap: 20px;
+    gap: 15px; /* Réduction de l'espace entre les sections */
 }
 
 .left-section, .right-section {
     border: 2px solid #d147a3; /* Encadré rose */
-    padding: 20px;
-    border-radius: 10px;
+    padding: 15px; /* Réduction du padding des sections */
+    border-radius: 8px;
     background-color: #ffffff; /* Fond blanc des encadrés */
-    width: 45%; /* Largeur des sections */
+    width: 40%; /* Réduction de la largeur des sections */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -24,14 +25,15 @@ body {
 
 h2 {
     color: #a1357a; /* Couleur rose plus sombre pour les titres */
-    margin-top: 20px;
+    margin-top: 15px; /* Réduction de l'espace au-dessus des titres */
+    font-size: 16px; /* Réduction de la taille des titres */
 }
 
 .result-text {
     color: #d147a3; /* Couleur rose pour le texte explicatif */
     font-weight: bold;
-    font-size: 14px;
-    margin-bottom: 10px;
+    font-size: 13px; /* Réduction de la taille du texte */
+    margin-bottom: 5px; /* Réduction de l'espace sous le texte */
 }
 
 .result-grammage {
@@ -41,56 +43,11 @@ h2 {
 
 label {
     display: block;
-    margin-top: 10px;
+    margin-top: 5px; /* Réduction de l'espace au-dessus des labels */
     font-weight: bold;
     color: #d147a3; /* Couleur rose pour les labels */
-    font-size: 14px; /* Taille de la police */
+    font-size: 13px; /* Réduction de la taille de la police */
 }
 
 input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 5px; /* Réduction de la marge inférieure pour moins d'espace */
-    border: 1px solid #d147a3; /* Bordure rose */
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-weight: bold; /* Texte en gras */
-    color: #a1357a; /* Couleur du texte en gras identique aux titres */
-}
-
-button {
-    padding: 10px 15px; /* Taille standard pour les boutons */
-    background-color: #d147a3; /* Couleur rose pour les boutons */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 14px; /* Texte standard */
-    text-align: center;
-    margin-bottom: 10px; /* Espace entre les boutons */
-}
-
-button.large {
-    padding: 15px 20px; /* Assure la taille du bouton plus grand */
-    font-size: 16px; /* Texte plus grand */
-}
-
-button.highlighted {
-    padding: 20px 25px; /* Plus grand pour le bouton de calcul total */
-    background-color: #d147a3; /* Couleur rose pour le bouton */
-    font-size: 18px; /* Texte plus grand */
-    margin-top: 20px; /* Espace supplémentaire pour le rendre plus visible */
-    margin-bottom: 20px; /* Plus grand espace pour séparer du résultat */
-    align-self: center; /* Centre le bouton dans sa section */
-}
-
-button:hover {
-    background-color: #b8378a; /* Couleur rose foncée au survol */
-}
-
-input:focus {
-    outline: none;
-    border-color: #d147a3; /* Bordure rose lorsque le champ est actif */
-    box-shadow: 0 0 5px #d147a3; /* Ombre rose */
-}
+    width: 1
