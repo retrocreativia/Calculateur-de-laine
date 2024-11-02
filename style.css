@@ -17,6 +17,9 @@ body {
     border-radius: 10px;
     background-color: #ffffff; /* Fond blanc des encadrés */
     width: 45%; /* Largeur des sections */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 h2 {
@@ -55,7 +58,7 @@ input {
 }
 
 button {
-    padding: 15px 20px; /* Taille plus grande pour les boutons */
+    padding: 15px 20px; /* Taille standard pour les boutons */
     background-color: #d147a3; /* Couleur rose pour les boutons */
     color: white;
     border: none;
@@ -69,6 +72,13 @@ button {
 
 button.large {
     padding: 15px 20px; /* Assure la taille du bouton total */
+}
+
+button.highlighted {
+    padding: 20px 25px; /* Taille plus grande pour le bouton mis en avant */
+    background-color: #d147a3; /* Couleur rose pour le bouton */
+    font-size: 18px; /* Texte plus grand */
+    margin-bottom: 20px; /* Plus grand espace pour séparer du résultat */
 }
 
 button:hover {
