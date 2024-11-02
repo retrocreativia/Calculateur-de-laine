@@ -1,26 +1,43 @@
 function calculateYarn(section) {
-    let width, height, weightSwatch, areaSwatch, resultElement;
+    const widthSwatch = document.getElementById('width-swatch').value;
+    const heightSwatch = document.getElementById('height-swatch').value;
+    const weightSwatch = document.getElementById('weight-swatch').value;
+
+    if (!widthSwatch || !heightSwatch || !weightSwatch) {
+        alert('Veuillez remplir toutes les informations concernant l\'échantillon.');
+        return;
+    }
+
+    const areaSwatch = widthSwatch * heightSwatch;
 
     if (section === 'body') {
-        width = document.getElementById('width-body').value;
-        height = document.getElementById('height-body').value;
-        weightSwatch = document.getElementById('weight-swatch-body').value;
-        areaSwatch = document.getElementById('area-swatch-body').value;
-        resultElement = document.getElementById('result-body');
-    } else if (section === 'sleeve') {
-        width = document.getElementById('width-sleeve').value;
-        height = document.getElementById('height-sleeve').value;
-        weightSwatch = document.getElementById('weight-swatch-sleeve').value;
-        areaSwatch = document.getElementById('area-swatch-sleeve').value;
-        resultElement = document.getElementById('result-sleeve');
+        const widthBody = document.getElementById('width-body').value;
+        const heightBody = document.getElementById('height-body').value;
+        const resultBody = document.getElementById('result-body');
+
+        if (widthBody && heightBody) {
+            const areaBody = widthBody * heightBody;
+            const numSwatchesBody = areaBody / areaSwatch;
+            const yarnNeededBody = numSwatchesBody * weightSwatch;
+            resultBody.innerHTML = `Quantité de laine estimée pour le corps : ${yarnNeededBody.toFixed(2)} g`;
+        } else {
+            resultBody.innerHTML = 'Veuillez remplir les mesures du corps pour le calcul.';
+        }
     }
 
-    if (width && height && weightSwatch && areaSwatch) {
-        const totalArea = width * height;
-        const numSwatches = totalArea / areaSwatch;
-        const yarnNeeded = numSwatches * weightSwatch;
-        resultElement.innerHTML = `Quantité de laine estimée : ${yarnNeeded.toFixed(2)} g`;
-    } else {
-        resultElement.innerHTML = 'Veuillez remplir tous les champs.';
+    if (section === 'sleeve') {
+        const widthSleeve = document.getElementById('width-sleeve').value;
+        const heightSleeve = document.getElementById('height-sleeve').value;
+        const resultSleeve = document.getElementById('result-sleeve');
+
+        if (widthSleeve && heightSleeve) {
+            const areaSleeve = widthSleeve * heightSleeve;
+            const numSwatchesSleeve = areaSleeve / areaSwatch;
+            const yarnNeededSleeve = numSwatchesSleeve * weightSwatch;
+            resultSleeve.innerHTML = `Quantité de laine estimée pour les manches : ${yarnNeededSleeve.toFixed(2)} g`;
+        } else {
+            resultSleeve.innerHTML = 'Veuillez remplir les mesures des manches pour le calcul.';
+        }
     }
 }
+
