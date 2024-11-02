@@ -57,19 +57,27 @@ input {
     font-weight: bold; /* Texte en gras */
 }
 
+.button-row {
+    display: flex;
+    gap: 10px; /* Espace entre les boutons */
+    margin-top: -10px; /* Pour aligner les boutons à la hauteur désirée */
+}
+
 button {
-    padding: 15px 20px; /* Taille plus grande pour le bouton */
+    padding: 15px 20px; /* Taille plus grande pour les boutons */
     background-color: #d147a3; /* Couleur rose pour les boutons */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px; /* Plus d'espace au-dessus du bouton */
     font-weight: bold;
     font-size: 16px; /* Texte plus grand */
-    display: block;
-    width: 100%; /* Centrer le bouton */
     text-align: center;
+    flex: 1; /* Permet aux boutons d'occuper la même largeur */
+}
+
+button.large {
+    padding: 15px 20px; /* Assure la taille du bouton total */
 }
 
 button:hover {
@@ -81,4 +89,3 @@ input:focus {
     border-color: #d147a3; /* Bordure rose lorsque le champ est actif */
     box-shadow: 0 0 5px #d147a3; /* Ombre rose */
 }
-
