@@ -1,57 +1,61 @@
-let yarnNeededBody = 0;
-let yarnNeededSleeve = 0;
+function calculerSurface(largeur, hauteur) {
+    return largeur * hauteur;
+}
 
-function calculateYarn(section) {
-    const widthSwatch = parseFloat(document.getElementById('width-swatch').value);
-    const heightSwatch = parseFloat(document.getElementById('height-swatch').value);
-    const weightSwatch = parseFloat(document.getElementById('weight-swatch').value);
+function calculerLaine(surface, surfaceEchantillon, poidsEchantillon) {
+    return (surface / surfaceEchantillon) * poidsEchantillon;
+}
 
-    if (isNaN(widthSwatch) || isNaN(heightSwatch) || isNaN(weightSwatch)) {
-        alert('Veuillez remplir toutes les informations concernant l\'échantillon avec des valeurs valides.');
+function calculerLaineCorps() {
+    const largeurEchantillon = parseFloat(document.getElementById('largeurEchantillon').value);
+    const hauteurEchantillon = parseFloat(document.getElementById('hauteurEchantillon').value);
+    const poidsEchantillon = parseFloat(document.getElementById('poidsEchantillon').value);
+    const largeurCorps = parseFloat(document.getElementById('largeurCorps').value);
+    const hauteurCorps = parseFloat(document.getElementById('hauteurCorps').value);
+
+    if (isNaN(largeurEchantillon) || isNaN(hauteurEchantillon) || isNaN(poidsEchantillon) ||
+        isNaN(largeurCorps) || isNaN(hauteurCorps)) {
+        alert("Veuillez remplir toutes les informations nécessaires.");
         return;
     }
 
-    const areaSwatch = widthSwatch * heightSwatch;
+    const surfaceEchantillon = calculerSurface(largeurEchantillon, hauteurEchantillon);
+    const surfaceCorps = calculerSurface(largeurCorps, hauteurCorps);
+    const laineCorps = calculerLaine(surfaceCorps, surfaceEchantillon, poidsEchantillon);
 
-    if (section === 'body') {
-        const widthBody = parseFloat(document.getElementById('width-body').value);
-        const heightBody = parseFloat(document.getElementById('height-body').value);
-        const resultBody = document.getElementById('result-body');
-
-        if (!isNaN(widthBody) && !isNaN(heightBody)) {
-            const areaBody = widthBody * heightBody;
-            const numSwatchesBody = areaBody / areaSwatch;
-            yarnNeededBody = numSwatchesBody * weightSwatch;
-            resultBody.innerHTML = `Quantité de laine estimée pour le corps : ${yarnNeededBody.toFixed(2)} g`;
-        } else {
-            resultBody.innerHTML = 'Veuillez remplir les mesures du corps pour le calcul.';
-            yarnNeededBody = 0; // Réinitialise la valeur si les entrées sont invalides
-        }
-    }
-
-    if (section === 'sleeve') {
-        const widthSleeve = parseFloat(document.getElementById('width-sleeve').value);
-        const heightSleeve = parseFloat(document.getElementById('height-sleeve').value);
-        const resultSleeve = document.getElementById('result-sleeve');
-
-        if (!isNaN(widthSleeve) && !isNaN(heightSleeve)) {
-            const areaSleeve = widthSleeve * heightSleeve;
-            const numSwatchesSleeve = areaSleeve / areaSwatch;
-            yarnNeededSleeve = numSwatchesSleeve * weightSwatch;
-            resultSleeve.innerHTML = `Quantité de laine estimée pour les manches : ${yarnNeededSleeve.toFixed(2)} g`;
-        } else {
-            resultSleeve.innerHTML = 'Veuillez remplir les mesures des manches pour le calcul.';
-            yarnNeededSleeve = 0; // Réinitialise la valeur si les entrées sont invalides
-        }
-    }
-
-    // Calcul du total à chaque fois qu'une section est calculée
-    const resultTotal = document.getElementById('result-total');
-    if (yarnNeededBody > 0 || yarnNeededSleeve > 0) {
-        const totalYarn = yarnNeededBody + yarnNeededSleeve;
-        resultTotal.innerHTML = `Quantité totale de laine estimée pour le corps et les manches : ${totalYarn.toFixed(2)} g`;
-    } else {
-        resultTotal.innerHTML = ''; // Efface le résultat si une des sections est invalide
-    }
+    document.getElementById('resultatCorps').textContent = laineCorps.toFixed(2);
 }
 
+function calculerLaineManches() {
+    const largeurEchantillon = parseFloat(document.getElementById('largeurEchantillon').value);
+    const hauteurEchantillon = parseFloat(document.getElementById('hauteurEchantillon').value);
+    const poidsEchantillon = parseFloat(document.getElementById('poidsEchantillon').value);
+    const largeurManches = parseFloat(document.getElementById('largeurManches').value);
+    const hauteurManches = parseFloat(document.getElementById('hauteurManches').value);
+
+    if (isNaN(largeurEchantillon) || isNaN(hauteurEchantillon) || isNaN(poidsEchantillon) ||
+        isNaN(largeurManches) || isNaN(hauteurManches)) {
+        alert("Veuillez remplir toutes les informations nécessaires pour les manches.");
+        return;
+    }
+
+    const surfaceEchantillon = calculerSurface(largeurEchantillon, hauteurEchantillon);
+    const surfaceManches = calculerSurface(largeurManches, hauteurManches);
+    const laineManches = calculerLaine(surfaceManches, surfaceEchantillon, poidsEchantillon);
+
+    document.getElementById('resultatManches').textContent = laineManches.toFixed(2);
+}
+
+function calculerLaineTotale() {
+    const laineCorps = parseFloat(document.getElementById('resultatCorps').textContent);
+    const laineManches = parseFloat(document.getElementById('resultatManches').textContent);
+
+    if (isNaN(laineCorps)) {
+        alert("Veuillez calculer la laine pour le corps.");
+        return;
+    }
+
+    const totalLaine = isNaN(laineManches) ? laineCorps : laineCorps + laineManches;
+
+    document.getElementById('resultatTotal').textContent = totalLaine.toFixed(2);
+}
