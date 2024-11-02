@@ -3,50 +3,55 @@ body {
     max-width: 600px;
     margin: auto;
     padding: 20px;
-    background-color: #ffe4e1; /* Couleur de fond rose pâle */
+    background-color: #ffffff; /* Fond blanc */
+}
+
+h2, h3 {
+    color: #d147a3; /* Couleur rose pour les titres */
+    margin-top: 20px;
 }
 
 label {
     display: block;
     margin-top: 10px;
-    color: #d147a3; /* Texte couleur rose */
-    font-weight: bold; /* Gras */
+    font-weight: bold;
+    color: #d147a3; /* Couleur rose pour les labels */
 }
 
 input {
     width: 100%;
+    padding: 8px;
     margin-bottom: 10px;
-    padding: 10px; /* Ajusté pour une meilleure lisibilité */
     border: 1px solid #d147a3; /* Bordure rose */
-    border-radius: 5px;
-    font-weight: bold; /* Gras */
-    display: block; /* Affiche chaque input en bloc pour alignement vertical */
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 button {
-    width: 100%; /* Assure que le bouton prend toute la largeur */
-    padding: 10px 20px;
-    background-color: #d147a3; /* Fond du bouton rose */
+    padding: 10px 15px;
+    background-color: #d147a3; /* Couleur rose pour les boutons */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-weight: bold; /* Gras */
-    margin-top: 10px; /* Espacement au-dessus du bouton */
+    margin-top: 10px;
 }
 
 button:hover {
-    background-color: #b8378a; /* Couleur du bouton au survol */
+    background-color: #b8378a; /* Couleur rose foncée au survol */
 }
 
-h2, h3 {
-    margin-top: 20px;
-    color: #d147a3; /* Couleur du texte rose */
-}
-
-.result {
-    margin-top: 20px;
-    color: #333;
+span {
     font-weight: bold;
-    text-align: center;
+    color: #d147a3; /* Couleur rose pour les résultats */
+}
+
+h3 {
+    margin-bottom: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #d147a3; /* Bordure rose lorsque le champ est actif */
+    box-shadow: 0 0 5px #d147a3; /* Ombre rose */
 }
