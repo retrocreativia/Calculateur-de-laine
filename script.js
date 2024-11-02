@@ -25,9 +25,10 @@ function calculerLaineCorps() {
 
     const surfaceEchantillon = calculerSurface(largeurEchantillon, hauteurEchantillon);
     const surfaceCorps = calculerSurface(largeurCorps, hauteurCorps);
-    const laineCorps = calculerLaine(surfaceCorps, surfaceEchantillon, poidsEchantillon);
+    const laineCorpsSimple = calculerLaine(surfaceCorps, surfaceEchantillon, poidsEchantillon);
+    const laineCorpsTotal = laineCorpsSimple * 2; // Multiplier par 2 pour le devant et le dos
 
-    document.getElementById('resultatCorps').textContent = laineCorps.toFixed(2);
+    document.getElementById('resultatCorps').textContent = laineCorpsTotal.toFixed(2);
 }
 
 function calculerLaineManches() {
@@ -45,21 +46,8 @@ function calculerLaineManches() {
 
     const surfaceEchantillon = calculerSurface(largeurEchantillon, hauteurEchantillon);
     const surfaceManches = calculerSurface(largeurManches, longueurManches);
-    const laineManches = calculerLaine(surfaceManches, surfaceEchantillon, poidsEchantillon);
+    const laineManchesSimple = calculerLaine(surfaceManches, surfaceEchantillon, poidsEchantillon);
+    const laineManchesTotal = laineManchesSimple * 2; // Multiplier par 2 pour la manche gauche et la manche droite
 
-    document.getElementById('resultatManches').textContent = laineManches.toFixed(2);
-}
-
-function calculerLaineTotale() {
-    const laineCorps = parseFloat(document.getElementById('resultatCorps').textContent);
-    const laineManches = parseFloat(document.getElementById('resultatManches').textContent);
-
-    if (isNaN(laineCorps)) {
-        alert("Veuillez calculer la laine pour le corps.");
-        return;
-    }
-
-    const totalLaine = isNaN(laineManches) ? laineCorps : laineCorps + laineManches;
-
-    document.getElementById('resultatTotal').textContent = totalLaine.toFixed(2);
+    document.getElementById('resultatManches').textContent = laineManchesTotal.toFixed(2);
 }
