@@ -35,16 +35,16 @@ function calculerLaineManches() {
     const hauteurEchantillon = parseFloat(document.getElementById('hauteurEchantillon').value);
     const poidsEchantillon = parseFloat(document.getElementById('poidsEchantillon').value);
     const largeurManches = parseFloat(document.getElementById('largeurManches').value);
-    const hauteurManches = parseFloat(document.getElementById('hauteurManches').value);
+    const longueurManches = parseFloat(document.getElementById('longueurManches').value);
 
     if (isNaN(largeurEchantillon) || isNaN(hauteurEchantillon) || isNaN(poidsEchantillon) ||
-        isNaN(largeurManches) || isNaN(hauteurManches)) {
+        isNaN(largeurManches) || isNaN(longueurManches)) {
         alert("Veuillez remplir toutes les informations nécessaires pour l'échantillon et les manches.");
         return;
     }
 
     const surfaceEchantillon = calculerSurface(largeurEchantillon, hauteurEchantillon);
-    const surfaceManches = calculerSurface(largeurManches, hauteurManches);
+    const surfaceManches = calculerSurface(largeurManches, longueurManches);
     const laineManches = calculerLaine(surfaceManches, surfaceEchantillon, poidsEchantillon);
 
     document.getElementById('resultatManches').textContent = laineManches.toFixed(2);
