@@ -29,11 +29,12 @@ h3 {
     font-size: 14px; /* Taille réduite pour l'écriture des résultats */
 }
 
-label {
+label, .result-value {
     display: block;
     margin-top: 10px;
     font-weight: bold;
-    color: #d147a3; /* Couleur rose pour les labels */
+    color: #d147a3; /* Couleur rose pour les labels et résultats */
+    font-size: 14px; /* Taille de la police des résultats identique aux labels */
 }
 
 input {
@@ -47,27 +48,27 @@ input {
 }
 
 button {
-    padding: 10px 15px;
+    padding: 15px 20px; /* Taille plus grande pour le bouton */
     background-color: #d147a3; /* Couleur rose pour les boutons */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
-    font-weight: bold; /* Texte en gras */
+    margin-top: 20px; /* Plus d'espace au-dessus du bouton */
+    font-weight: bold;
+    font-size: 16px; /* Texte plus grand */
+    display: block;
+    width: 100%; /* Centrer le bouton */
+    text-align: center;
 }
 
 button:hover {
     background-color: #b8378a; /* Couleur rose foncée au survol */
 }
 
-span, .result-value {
+.result-value {
     font-weight: bold;
     color: #4CAF50; /* Couleur verte pour les résultats */
-}
-
-input:focus {
-    outline: none;
-    border-color: #d147a3; /* Bordure rose lorsque le champ est actif */
-    box-shadow: 0 0 5px #d147a3; /* Ombre rose */
+    margin-top: 20px; /* Espace supplémentaire au-dessus des résultats */
+    text-align: center; /* Centrer le texte du résultat */
 }
