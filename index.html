@@ -7,39 +7,45 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>1. Informations sur l'échantillon</h2>
-    <label><strong>Largeur de l'échantillon (cm) :</strong></label>
-    <input type="number" id="largeurEchantillon"><br><br>
+    <div class="container">
+        <div class="left-section">
+            <h2>Informations sur l'échantillon</h2>
+            <label><strong>Largeur de l'échantillon (cm) :</strong></label>
+            <input type="number" id="largeurEchantillon"><br><br>
 
-    <label><strong>Hauteur de l'échantillon (cm) :</strong></label>
-    <input type="number" id="hauteurEchantillon"><br><br>
+            <label><strong>Hauteur de l'échantillon (cm) :</strong></label>
+            <input type="number" id="hauteurEchantillon"><br><br>
 
-    <label><strong>Poids de l'échantillon (g) :</strong></label>
-    <input type="number" id="poidsEchantillon"><br><br>
+            <label><strong>Poids de l'échantillon (g) :</strong></label>
+            <input type="number" id="poidsEchantillon"><br><br>
 
-    <h2>2. Calcul du corps</h2>
-    <label><strong>Largeur du corps (cm) :</strong></label>
-    <input type="number" id="largeurCorps"><br><br>
+            <h2>Calcul du corps</h2>
+            <label><strong>Largeur du corps (cm) :</strong></label>
+            <input type="number" id="largeurCorps"><br><br>
 
-    <label><strong>Hauteur du corps (cm) :</strong></label>
-    <input type="number" id="hauteurCorps"><br><br>
+            <label><strong>Hauteur du corps (cm) :</strong></label>
+            <input type="number" id="hauteurCorps"><br><br>
 
-    <button onclick="calculerLaineCorps()"><strong>Calculer la quantité de laine pour le corps</strong></button>
-    <h3>Résultat laine pour le corps : <span id="resultatCorps"></span> g</h3><br>
+            <button onclick="calculerLaineCorps()"><strong>Calculer la quantité de laine pour le corps</strong></button>
+            <h3>Résultat laine pour le corps : <span id="resultatCorps"></span> g</h3>
+        </div>
 
-    <h2>3. Calcul des manches (optionnel)</h2>
-    <label><strong>Largeur des manches (cm) :</strong></label>
-    <input type="number" id="largeurManches"><br><br>
+        <div class="right-section">
+            <h2>Calcul des manches (optionnel)</h2>
+            <label><strong>Largeur des manches (cm) :</strong></label>
+            <input type="number" id="largeurManches"><br><br>
 
-    <label><strong>Longueur des manches (cm) :</strong></label>
-    <input type="number" id="longueurManches"><br><br>
+            <label><strong>Longueur des manches (cm) :</strong></label>
+            <input type="number" id="longueurManches"><br><br>
 
-    <button onclick="calculerLaineManches()"><strong>Calculer la quantité de laine pour les manches</strong></button>
-    <h3>Résultat laine pour les manches : <span id="resultatManches"></span> g</h3><br>
+            <button onclick="calculerLaineManches()"><strong>Calculer la quantité de laine pour les manches</strong></button>
+            <h3>Résultat laine pour les manches : <span id="resultatManches"></span> g</h3>
 
-    <h2>Résultat total</h2>
-    <button onclick="calculerLaineTotale()"><strong>Calculer la quantité totale de laine</strong></button>
-    <h3>Total de laine nécessaire : <span id="resultatTotal"></span> g</h3>
+            <h2>Résultat total</h2>
+            <button onclick="calculerLaineTotale()"><strong>Calculer la quantité totale de laine</strong></button>
+            <h3>Total de laine nécessaire : <span id="resultatTotal"></span> g</h3>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
