@@ -3,34 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculateur de Laine</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Calculateur de laine</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <label><strong>Largeur de l'échantillon (cm) :</strong></label>
-    <input type="number" id="largeurEchantillon"><br><br>
+    <div class="container">
+        <h2>Calculateur de Laine</h2>
 
-    <label><strong>Hauteur de l'échantillon (cm) :</strong></label>
-    <input type="number" id="hauteurEchantillon"><br><br>
+        <!-- Section pour le corps -->
+        <div class="form-section">
+            <h3>Calcul du Corps</h3>
+            <label for="width-body">Largeur du corps (cm)</label>
+            <input type="number" id="width-body" placeholder="Entrez la largeur">
 
-    <label><strong>Poids de l'échantillon (g) :</strong></label>
-    <input type="number" id="poidsEchantillon"><br><br>
+            <label for="height-body">Hauteur du corps (cm)</label>
+            <input type="number" id="height-body" placeholder="Entrez la hauteur">
 
-    <label><strong>Largeur du pull (cm) :</strong></label>
-    <input type="number" id="largeurPull"><br><br>
+            <label for="weight-swatch-body">Poids de l'échantillon (g)</label>
+            <input type="number" id="weight-swatch-body" placeholder="Entrez le poids">
 
-    <label><strong>Hauteur du pull (cm) :</strong></label>
-    <input type="number" id="hauteurPull"><br><br>
+            <label for="area-swatch-body">Surface de l'échantillon (cm²)</label>
+            <input type="number" id="area-swatch-body" placeholder="Entrez la surface">
 
-    <label><strong>Longueur de la manche (cm) :</strong></label>
-    <input type="number" id="longueurManche"><br><br>
+            <button onclick="calculateYarn('body')">Calculer la laine pour le corps</button>
+            <div class="result" id="result-body"></div>
+        </div>
 
-    <label><strong>Largeur de la manche (cm) :</strong></label>
-    <input type="number" id="largeurManche"><br><br>
+        <!-- Section pour les manches -->
+        <div class="form-section">
+            <h3>Calcul des Manches</h3>
+            <label for="width-sleeve">Largeur de la manche (cm)</label>
+            <input type="number" id="width-sleeve" placeholder="Entrez la largeur">
 
-    <button onclick="calculerLaine()">Calculer la quantité de laine</button>
+            <label for="height-sleeve">Hauteur de la manche (cm)</label>
+            <input type="number" id="height-sleeve" placeholder="Entrez la hauteur">
 
-    <h2>Résultat : <span id="resultat"></span> g de laine nécessaire</h2>
+            <label for="weight-swatch-sleeve">Poids de l'échantillon (g)</label>
+            <input type="number" id="weight-swatch-sleeve" placeholder="Entrez le poids">
+
+            <label for="area-swatch-sleeve">Surface de l'échantillon (cm²)</label>
+            <input type="number" id="area-swatch-sleeve" placeholder="Entrez la surface">
+
+            <button onclick="calculateYarn('sleeve')">Calculer la laine pour les manches</button>
+            <div class="result" id="result-sleeve"></div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
