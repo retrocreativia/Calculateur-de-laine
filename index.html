@@ -27,8 +27,8 @@
             <input type="number" id="hauteurCorps"><br><br>
 
             <button onclick="calculerLaineCorps()"><strong>Calculer la quantité de laine pour le corps</strong></button>
-            <h3 id="resultatCorps" class="result-value">Résultat quantité de laine pour l'avant du pull : ... g</h3>
-            <h3 id="resultatCorpsTotal" class="result-value">Résultat quantité totale pour le corps (avant et dos) : ... g</h3>
+            <h3 class="result-value">Résultat quantité de laine pour l'avant du pull : <span id="resultatCorps" class="result-grammage">... g</span></h3>
+            <h3 class="result-value">Résultat quantité totale pour le corps (avant et dos) : <span id="resultatCorpsTotal" class="result-grammage">... g</span></h3>
         </div>
 
         <div class="right-section">
@@ -40,11 +40,11 @@
             <input type="number" id="longueurManches"><br><br>
 
             <button onclick="calculerLaineManches()"><strong>Calculer la quantité de laine pour les manches</strong></button>
-            <h3 id="resultatManches" class="result-value">Résultat quantité de laine pour une manche : ... g</h3>
-            <h3 id="resultatManchesTotal" class="result-value">Résultat quantité totale pour les deux manches : ... g</h3>
+            <h3 class="result-value">Résultat quantité de laine pour une manche : <span id="resultatManches" class="result-grammage">... g</span></h3>
+            <h3 class="result-value">Résultat quantité totale pour les deux manches : <span id="resultatManchesTotal" class="result-grammage">... g</span></h3>
 
             <button onclick="calculerLaineTotale()"><strong>Calculer la quantité totale de laine</strong></button>
-            <h3 id="resultatTotal" class="result-value">Total pour les deux manches et le corps : ... g</h3>
+            <h3 class="result-value">Total pour les deux manches et le corps : <span id="resultatTotal" class="result-grammage">... g</span></h3>
         </div>
     </div>
 
