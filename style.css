@@ -29,17 +29,21 @@ h3 {
     font-size: 14px; /* Taille réduite pour l'écriture des résultats */
 }
 
-label, .result-value {
+label {
     display: block;
     margin-top: 10px;
     font-weight: bold;
-    color: #d147a3; /* Couleur rose pour les labels et résultats */
-    font-size: 14px; /* Taille de la police des résultats identique aux labels */
-    text-align: center; /* Centrer le texte des résultats */
+    color: #d147a3; /* Couleur rose pour les labels */
+    font-size: 14px; /* Taille de la police */
+}
+
+.result-value {
+    color: #d147a3; /* Couleur rose pour les textes explicatifs */
+    font-weight: bold;
 }
 
 .result-grammage {
-    color: #4CAF50; /* Couleur verte pour les résultats de grammage */
+    color: #4CAF50; /* Couleur verte pour le résultat du grammage */
     font-weight: bold;
 }
 
@@ -77,3 +81,4 @@ input:focus {
     border-color: #d147a3; /* Bordure rose lorsque le champ est actif */
     box-shadow: 0 0 5px #d147a3; /* Ombre rose */
 }
+
