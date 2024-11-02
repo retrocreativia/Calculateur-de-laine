@@ -3,58 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculateur de laine</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Calculateur de Laine</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h2>Calculateur de Laine</h2>
+    <h2>1. Informations sur l'échantillon</h2>
+    <label><strong>Largeur de l'échantillon (cm) :</strong></label>
+    <input type="number" id="largeurEchantillon"><br><br>
 
-        <!-- Section pour l'échantillon -->
-        <div class="form-section">
-            <h3>Informations sur l'échantillon</h3>
-            <label for="width-swatch"><strong>Largeur de l'échantillon (cm)</strong></label>
-            <input type="number" id="width-swatch" placeholder="Entrez la largeur">
+    <label><strong>Hauteur de l'échantillon (cm) :</strong></label>
+    <input type="number" id="hauteurEchantillon"><br><br>
 
-            <label for="height-swatch"><strong>Hauteur de l'échantillon (cm)</strong></label>
-            <input type="number" id="height-swatch" placeholder="Entrez la hauteur">
+    <label><strong>Poids de l'échantillon (g) :</strong></label>
+    <input type="number" id="poidsEchantillon"><br><br>
 
-            <label for="weight-swatch"><strong>Poids de l'échantillon (g)</strong></label>
-            <input type="number" id="weight-swatch" placeholder="Entrez le poids">
-        </div>
+    <h2>2. Calcul du corps</h2>
+    <label><strong>Largeur du corps (cm) :</strong></label>
+    <input type="number" id="largeurCorps"><br><br>
 
-        <!-- Section pour le corps -->
-        <div class="form-section">
-            <h3>Calcul du Corps</h3>
-            <label for="width-body"><strong>Largeur du corps (cm)</strong></label>
-            <input type="number" id="width-body" placeholder="Entrez la largeur">
+    <label><strong>Hauteur du corps (cm) :</strong></label>
+    <input type="number" id="hauteurCorps"><br><br>
 
-            <label for="height-body"><strong>Hauteur du corps (cm)</strong></label>
-            <input type="number" id="height-body" placeholder="Entrez la hauteur">
+    <button onclick="calculerLaineCorps()">Calculer la laine pour le corps</button>
+    <h3>Résultat laine pour le corps : <span id="resultatCorps"></span> g</h3><br>
 
-            <button onclick="calculateYarn('body')">Calculer la laine pour le corps</button>
-            <div class="result" id="result-body"></div>
-        </div>
+    <h2>3. Calcul des manches (optionnel)</h2>
+    <label><strong>Largeur des manches (cm) :</strong></label>
+    <input type="number" id="largeurManches"><br><br>
 
-        <!-- Section pour les manches -->
-        <div class="form-section">
-            <h3>Calcul des Manches</h3>
-            <label for="width-sleeve"><strong>Largeur de la manche (cm)</strong></label>
-            <input type="number" id="width-sleeve" placeholder="Entrez la largeur">
+    <label><strong>Hauteur des manches (cm) :</strong></label>
+    <input type="number" id="hauteurManches"><br><br>
 
-            <label for="height-sleeve"><strong>Hauteur de la manche (cm)</strong></label>
-            <input type="number" id="height-sleeve" placeholder="Entrez la hauteur">
+    <button onclick="calculerLaineManches()">Calculer la laine pour les manches</button>
+    <h3>Résultat laine pour les manches : <span id="resultatManches"></span> g</h3><br>
 
-            <button onclick="calculateYarn('sleeve')">Calculer la laine pour les manches</button>
-            <div class="result" id="result-sleeve"></div>
-        </div>
-
-        <!-- Résultat total -->
-        <div class="form-section">
-            <h3>Total de Laine</h3>
-            <div class="result" id="result-total"></div>
-        </div>
-    </div>
+    <h2>Résultat total</h2>
+    <button onclick="calculerLaineTotale()">Calculer la laine totale</button>
+    <h3>Total de laine nécessaire : <span id="resultatTotal"></span> g</h3>
 
     <script src="script.js"></script>
 </body>
