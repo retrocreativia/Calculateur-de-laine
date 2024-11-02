@@ -1,28 +1,14 @@
 body {
     font-family: Arial, sans-serif;
-    max-width: 1200px;
+    max-width: 600px;
     margin: auto;
     padding: 20px;
     background-color: #ffffff; /* Fond blanc */
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.column {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #d147a3; /* Bordure rose */
-    border-radius: 8px;
-    background-color: #f9f9f9; /* Fond léger pour la colonne */
-}
-
 h2, h3 {
     color: #a1357a; /* Couleur rose plus sombre pour les titres */
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 label {
@@ -62,9 +48,8 @@ span {
     color: #4CAF50; /* Couleur verte pour les résultats */
 }
 
-.total-result {
-    margin-top: 20px;
-    text-align: center;
+h3 {
+    margin-bottom: 15px;
 }
 
 input:focus {
