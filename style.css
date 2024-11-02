@@ -55,31 +55,34 @@ input {
     border-radius: 4px;
     box-sizing: border-box;
     font-weight: bold; /* Texte en gras */
-    color: #a1357a; /* Couleur rose plus sombre pour les chiffres dans le champ */
+    color: #a1357a; /* Couleur des chiffres */
 }
 
 button {
-    padding: 15px 20px; /* Taille standard pour les boutons */
+    padding: 10px 15px; /* Taille standard pour les boutons */
     background-color: #d147a3; /* Couleur rose pour les boutons */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    font-size: 16px; /* Texte plus grand */
+    font-size: 14px; /* Texte standard */
     text-align: center;
     margin-bottom: 10px; /* Espace entre les boutons */
 }
 
 button.large {
-    padding: 15px 20px; /* Assure la taille du bouton total */
+    padding: 15px 20px; /* Assure la taille du bouton plus grand */
+    font-size: 16px; /* Texte plus grand */
 }
 
 button.highlighted {
-    padding: 20px 25px; /* Taille plus grande pour le bouton mis en avant */
+    padding: 20px 25px; /* Plus grand pour le bouton de calcul total */
     background-color: #d147a3; /* Couleur rose pour le bouton */
     font-size: 18px; /* Texte plus grand */
+    margin-top: 20px; /* Espace supplémentaire pour le rendre plus visible */
     margin-bottom: 20px; /* Plus grand espace pour séparer du résultat */
+    align-self: center; /* Centre le bouton dans sa section */
 }
 
 button:hover {
