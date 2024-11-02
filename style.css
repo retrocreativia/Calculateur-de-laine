@@ -1,57 +1,49 @@
 body {
-    font-family: 'Verdana', sans-serif;
-    background-color: #ffffff;
-    color: #333;
-    margin: 20px;
-}
-.container {
-    max-width: 400px;
+    font-family: Arial, sans-serif;
+    max-width: 600px;
     margin: auto;
     padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
+    background-color: #ffe4e1; /* Couleur de fond rose pâle */
 }
-h2, h3 {
-    text-align: center;
-    font-family: 'Verdana', sans-serif;
-    color: #e91e63; /* Rose moderne */
-    font-weight: bold;
-}
+
 label {
     display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
-    color: #e91e63; /* Rose moderne */
-    font-weight: bold;
-}
-input {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #bbb;
-    border-radius: 5px;
-    font-size: 14px;
+    margin-top: 10px;
+    color: #d147a3; /* Texte couleur rose */
     font-weight: bold; /* Gras */
 }
-button {
+
+input {
     width: 100%;
-    padding: 10px;
-    background-color: #e91e63; /* Rose moderne */
-    color: #fff;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #d147a3; /* Bordure rose */
+    border-radius: 5px;
+    font-weight: bold; /* Gras */
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #d147a3; /* Fond du bouton rose */
+    color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    font-family: 'Verdana', sans-serif;
     font-weight: bold; /* Gras */
 }
+
 button:hover {
-    background-color: #d81b60; /* Couleur rose plus foncée */
+    background-color: #b8378a; /* Couleur du bouton au survol */
 }
+
+h2, h3 {
+    margin-top: 20px;
+    color: #d147a3; /* Couleur du texte rose */
+}
+
 .result {
     margin-top: 20px;
-    text-align: center;
-    font-weight: bold;
     color: #333;
+    font-weight: bold;
+    text-align: center;
 }
