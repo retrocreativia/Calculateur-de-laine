@@ -31,6 +31,9 @@
         </div>
 
         <div class="right-section">
+            <button class="highlighted" onclick="calculerLaineTotale()"><strong>Calculer la quantité totale de laine</strong></button>
+            <h3 class="result-text">Total pour les deux manches et le corps : <span id="resultatTotal" class="result-grammage">...</span></h3>
+            
             <h2>Calcul des manches (optionnel)</h2>
             <label><strong>Largeur des manches (cm) :</strong></label>
             <input type="number" id="largeurManches"><br><br>
@@ -38,11 +41,9 @@
             <label><strong>Longueur des manches (cm) :</strong></label>
             <input type="number" id="longueurManches"><br><br>
 
-            <button class="large" onclick="calculerLaineManches()"><strong>Calculer la quantité de laine pour les manches</strong></button>
+            <button onclick="calculerLaineManches()"><strong>Calculer la quantité de laine pour les manches</strong></button>
             <h3 class="result-text">Résultat quantité de laine pour une manche : <span id="resultatManches" class="result-grammage">...</span></h3>
             <h3 class="result-text">Résultat quantité totale pour les deux manches : <span id="resultatManchesTotal" class="result-grammage">...</span></h3>
-
-            <h3 class="result-text">Total pour les deux manches et le corps : <span id="resultatTotal" class="result-grammage">...</span></h3>
         </div>
     </div>
 
