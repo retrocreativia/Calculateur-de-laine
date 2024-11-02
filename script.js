@@ -28,7 +28,10 @@ function calculerLaineCorps() {
     const laineCorpsSimple = calculerLaine(surfaceCorps, surfaceEchantillon, poidsEchantillon);
     const laineCorpsTotal = laineCorpsSimple * 2; // Multiplier par 2 pour le devant et le dos
 
-    document.getElementById('resultatCorps').textContent = laineCorpsTotal.toFixed(2);
+    document.getElementById('resultatCorps').textContent = `Résultat pour un morceau : ${laineCorpsSimple.toFixed(2)} g`;
+    document.getElementById('resultatCorpsTotal').textContent = `Total pour le corps (devant et dos) : ${laineCorpsTotal.toFixed(2)} g`;
+
+    return laineCorpsTotal; // Retourner la valeur pour l'utiliser dans le calcul final
 }
 
 function calculerLaineManches() {
@@ -49,5 +52,21 @@ function calculerLaineManches() {
     const laineManchesSimple = calculerLaine(surfaceManches, surfaceEchantillon, poidsEchantillon);
     const laineManchesTotal = laineManchesSimple * 2; // Multiplier par 2 pour la manche gauche et la manche droite
 
-    document.getElementById('resultatManches').textContent = laineManchesTotal.toFixed(2);
+    document.getElementById('resultatManches').textContent = `Résultat pour une manche : ${laineManchesSimple.toFixed(2)} g`;
+    document.getElementById('resultatManchesTotal').textContent = `Total pour les deux manches : ${laineManchesTotal.toFixed(2)} g`;
+
+    return laineManchesTotal; // Retourner la valeur pour l'utiliser dans le calcul final
+}
+
+function calculerLaineTotale() {
+    const laineCorpsTotal = calculerLaineCorps();
+    const laineManchesTotal = calculerLaineManches();
+
+    if (isNaN(laineCorpsTotal) || isNaN(laineManchesTotal)) {
+        alert("Veuillez calculer la laine pour le corps et les manches.");
+        return;
+    }
+
+    const totalLaine = laineCorpsTotal + laineManchesTotal;
+    document.getElementById('resultatTotal').textContent = `Total pour les deux manches et le corps : ${totalLaine.toFixed(2)} g`;
 }
