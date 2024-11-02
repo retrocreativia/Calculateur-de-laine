@@ -50,7 +50,7 @@ label {
 input {
     width: 100%;
     padding: 8px;
-    margin-bottom: 5px; /* Réduction de la marge inférieure pour moins d'espace */
+    margin-bottom: 10px;
     border: 1px solid #d147a3; /* Bordure rose */
     border-radius: 4px;
     box-sizing: border-box;
@@ -94,3 +94,4 @@ input:focus {
     border-color: #d147a3; /* Bordure rose lorsque le champ est actif */
     box-shadow: 0 0 5px #d147a3; /* Ombre rose */
 }
+
