@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Verdana', sans-serif;
     background-color: #ffffff;
     color: #333;
     margin: 20px;
@@ -10,24 +10,28 @@ body {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
-    background-color: #f9f9f9;
+    background-color: #f0f0f0;
 }
-h2 {
+h2, h3 {
     text-align: center;
+    font-family: 'Verdana', sans-serif;
 }
 .form-section {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
 }
 input {
-    width: calc(100% - 22px);
+    width: calc(100% - 20px);
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    border: 1px solid #bbb;
     border-radius: 5px;
+    font-size: 14px;
 }
 button {
     width: 100%;
@@ -37,6 +41,8 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    font-family: 'Verdana', sans-serif;
 }
 button:hover {
     background-color: #45a049;
@@ -44,4 +50,5 @@ button:hover {
 .result {
     margin-top: 20px;
     text-align: center;
+    font-weight: bold;
 }
